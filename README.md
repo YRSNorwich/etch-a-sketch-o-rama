@@ -41,3 +41,11 @@ A rad project for drawing totally tubular things on an Etch A Sketch. To the max
 ### arduino enacter
 1. [ ] Move motors by given amount of steps
 1. [ ] Implement Arduino protocol (relies on #1 of arduino driver)
+
+###Useful Links
+Array passing
+http://forum.arduino.cc/index.php?topic=44451.0
+Node serial communication
+http://danialk.github.io/blog/2014/04/12/arduino-and-nodejs-communication-with-serial-ports/
+--
+https://github.com/voodootikigod/node-serialport
