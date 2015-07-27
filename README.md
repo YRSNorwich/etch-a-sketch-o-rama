@@ -4,12 +4,16 @@ A rad project for drawing totally tubular things on an Etch A Sketch. To the max
 ## stack
 
 - Data Formatter		Node
+
 	V Draw instructions V
 - Canvas Implementation		Node
+
 	V Point array (proportional floats) V
 - Arduino Driver		Node
+
 	V Step array (int) V
 - Arduino Enacter		Arduino C
+
 	V Movement V
 
 ## todo
