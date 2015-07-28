@@ -44,13 +44,13 @@ Line2DContext.prototype.roundedRect = function(x, y, radius, width, height) {
     context.beginPath()
       this.roundedCorner(x + radius, y, 0,0,radius, "tl");
       this.lineTo(x, y  + height - radius);
-      
+
       this.roundedCorner(x + radius, y + height - radius, 0, 0, radius, "bl")
       this.lineTo(x + width - radius, y + height);
-  
+
       this.roundedCorner(x + width - radius, y + height - radius, 0, 0, radius, "br")
       this.lineTo(x + width, y);
-  
+
       this.roundedCorner(x + width - radius, y, 0,0,radius,"tr")
       this.lineTo(x + radius, y - radius)
     context.stroke();
@@ -80,7 +80,7 @@ Line2DContext.prototype.roundedCorner = function(x, y, x1, y1, radius, dir) {
     modifierX = -1;
     modifierY = -1;
   }
- 
+
     var xx = 0;
     var yy = 0;
   if(dir == "bl" || dir =="tr") {
@@ -96,7 +96,7 @@ Line2DContext.prototype.roundedCorner = function(x, y, x1, y1, radius, dir) {
       this.lineTo(x + xx, y + yy);
     };
   }
-    
+
 }
 
 
@@ -117,10 +117,3 @@ rad_context.rect(0,0,500,200);
 // })
 
 // rad_context.roundedRect(100,100,50, 100, 100);
-
-
-
-
-
-
-
