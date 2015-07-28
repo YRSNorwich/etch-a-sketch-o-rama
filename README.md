@@ -20,8 +20,11 @@ A rad project for drawing totally tubular things on an Etch A Sketch. To the max
 
 ### data formatter
 1. [ ] Find interesting data sources
-1. [ ] Write code to fetch data from sources
-1. [ ] Cache data
+  1. [X] 1
+  1. [ ] 2
+  1. [ ] 3
+1. [X] Write code to fetch data from sources
+1. [X] Cache data
 1. [ ] Layout data with canvas
 1. [ ] Test functions with HTML5 canvas
 1. [ ] Work out way of switching between data (in a pleasing manner)
