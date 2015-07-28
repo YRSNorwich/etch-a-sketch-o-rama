@@ -1,0 +1,21 @@
+{
+  "name": "data-formatter",
+  "version": "0.0.0",
+  "description": "Loads rad data and displays it in a dashboard-like fashion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rad",
+    "dashboard",
+    "open",
+    "data"
+  ],
+  "author": "YRSNorwich",
+  "license": "GPLv2",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "request": "^2.60.0"
+  }
+}
