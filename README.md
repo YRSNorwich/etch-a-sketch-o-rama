@@ -28,8 +28,9 @@ A rad project for drawing totally tubular things on an Etch A Sketch. To the max
 1. [ ] Work on demo screens
 
 ### canvas implementation
-1. [ ] Implement functions using only lineTo
-1. [ ] Test functions
+1. [o] Implement functions using only lineTo
+1. [o] Test functions
+1. [ ] Text generation
 
 ### arduino driver
 1. [ ] Create Arduino protocol
