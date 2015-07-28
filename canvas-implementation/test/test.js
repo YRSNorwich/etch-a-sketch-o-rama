@@ -100,14 +100,17 @@ Line2DContext.prototype.roundedCorner = function(x, y, x1, y1, radius, dir) {
 }
 
 
-
+var points = [];
 var rad_context = new Line2DContext(function(x, y) {
+    points.push([Math.floor(x), Math.floor(y)]);
     context.lineTo(x, y);
 });
 
 rad_context.roundedRect(25,25, 50, 450, 150);
 rad_context.arc(30,30,50);
 rad_context.rect(0,0,500,200);
+
+console.log(JSON.stringify(points));
 //rad_context.drawArrayOfPoints(100,100,roundedRect)
 
 // //main
