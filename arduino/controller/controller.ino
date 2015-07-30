@@ -15,61 +15,26 @@ int toIndex = 0;
 int sizeArray = 6;
 
 boolean linedone = true;
-void doBreshnan() {
 
-  if(linedone == true) {
-        if(toIndex > sizeArray) {
-          return;  
-        }
-          toIndex++;
-          from[0] = points[toIndex - 1];
-          from[1] = points[toIndex];
-          to[0] = points[toIndex + 1];
-          to[1] = points[toIndex + 2];
-          dx = abs(to[0] - from[0]);
-          if(from[0] < to[0]) {
-            sx = 1;
-          } else {
-            sx = -1;
-          }
-          dy = abs(to[1] - from[1]);
-          if(from[1] < to[1]) {
-            sy = 1;  
-          } else {
-            sy = -1;
-          }
-          err = (dx>dy ? dx : -dy)/2;
-          linedone = false;
-         }
-        
-       // if(from[0] == to[0] && from[1] == to[1] && toIndex == sizeArray - 1) {
-       //   Serial.print(toIndex == sizeArray - 1);
-       //   linedone = false;
-       //   return;
-       // }
-        
-        if(from[0] == to[0] && from[1] == to[1]) {
-            linedone = true;
-            return;    
-        }
-        
-        double e2 = err;
-        
-        if(e2 > -dx) {
-          err -= dy;
-          from[0] += sx;
-          
-          moveLR(sx);
-        }
-    
-        if(e2 < dy) {
-          err += dx;
-          from[1] += sy;
-          
-          moveUD(sy);        
-        }
-        return;
+void line(int x0, int y0, int x1, int y1) {
+ 
+  int dx = abs(x1-x0), sx = x0<x1 ? 1 : -1;
+  int dy = abs(y1-y0), sy = y0<y1 ? 1 : -1; 
+  int err = (dx>dy ? dx : -dy)/2, e2;
+ 
+  for(;;){
+    moveUD(sy);
+    moveLR(sx);
+    if (x0==x1 && y0==y1) break;
+    e2 = err;
+    if (e2 > -dx) { 
+      err -= dy; x0 += sx; 
+    }
+    if (e2 < dy) {
+     err += dx; y0 += sy; 
+    }
   }
+}
 
 int moveUD(int sy) {
   Serial.print(sy);
@@ -86,12 +51,18 @@ void setup() {
 }
 
 // the loop routine runs over and over again forever:
+int ticker = 0;
 void loop() {
  
   delay(25);
+  
+  
+  if(ticker < sizeArray) {
+    line(points[ticker], points[ticker+1], points[ticker+2], points[ticker+3]);
+  }
 
-    
-  doBreshnan();
+  ticker++;
+  
  
   
   
